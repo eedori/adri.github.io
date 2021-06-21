@@ -1,1 +1,5 @@
- baseurl:
+
+
+
+baseurl:          "/adri.github.io" # the subpath of your site, e.g. /blog
+url:              "" # the base hostname & protocol for your site. Have a look at robots.txt as well!
