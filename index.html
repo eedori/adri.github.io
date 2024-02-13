@@ -1,300 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
+<!-- 
+	quit lookin at my code
+	have some cake
 
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                   _____
+           _..--'''@   @'''--.._
+         .'   @_/-//-\/>/>'/ @  '.
+        (  @  /_<//<'/----------^-)
+        |'._  @     //|###########|
+        |~  ''--..@|',|}}}}}}}}}}}|
+        |  ~   ~   |/ |###########|
+        | ~~  ~   ~|./|{{{{{{{{{{{|
+         '._ ~ ~ ~ |,/`````````````
+      adri  ''--.~.|/
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-      <!-- SOCIAL ICONS! -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Computer Solutions Expert</title>
-  </head>
-  <body>
-      <style>
-body {
-  background-color: #111111;
-  margin: 1;
+
+-->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<title>Aparisi</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+	<meta name="description" content="security.">
+
+	<link href="resources/global.css" rel="stylesheet" type="text/css">
+<link href="resources/forms.css" rel="stylesheet" type="text/css">
+<link href="resources/jobs.css" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">$J = jQuery.noConflict();</script><script type="text/javascript" src="resources/aparisi.js"></script>
+<script type="text/javascript">
+</script><script type="text/javascript" src="resources/jobs.js"></script>
+<script src="resources/api.js"></script>
+
+
+<style>
+a.button1{
+display:inline-block;
+padding:0.35em 1.2em;
+border:0.1em solid #f74843;
+margin:0 0.3em 0.3em 0;
+border-radius:0.12em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+color: #f74843;
+text-align:center;
+transition: all 0.2s;
+}
+a.button1:hover{
+color:#FFFF;
+background-color:#f74843;
+}
+@media all and (max-width:30em){
+a.button1{
+display:block;
+margin:0.4em auto;
+}
+}
+h5 {
+padding:0px; 
+margin:0px;
+border:0px;
+}
+.monki{
+	padding-left:20px;
 }
 
-.bg {
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  right: 0;
-  bottom: 0;
-  width: 200%;
-  height: 200vh;
-  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
-  background-repeat: repeat;
-  animation: bg-animation .2s infinite;
-  opacity: .9;
-  visibility: visible;
-  z-index: -1;
-}
+</style>
 
-@keyframes bg-animation {
-    0% { transform: translate(0,0) }
-    10% { transform: translate(-5%,-5%) }
-    20% { transform: translate(-10%,5%) }
-    30% { transform: translate(5%,-10%) }
-    40% { transform: translate(-5%,15%) }
-    50% { transform: translate(-10%,5%) }
-    60% { transform: translate(15%,0) }
-    70% { transform: translate(0,10%) }
-    80% { transform: translate(-15%,0) }
-    90% { transform: translate(10%,5%) }
-    100% { transform: translate(5%,0) }
-}
-ul.timeline {
-    list-style-type: none;
-    position: relative;
-}
-ul.timeline:before {
-    content: ' ';
-    background: #d4d9df;
-    display: inline-block;
-    position: absolute;
-    left: 29px;
-    width: 2px;
-    height: 100%;
-    z-index: 400;
-}
-ul.timeline > li {
-    margin: 20px 0;
-    padding-left: 20px;
-}
-ul.timeline > li:before {
-    content: ' ';
-    background: white;
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    border: 3px solid #22c0e8;
-    left: 20px;
-    width: 20px;
-    height: 20px;
-    z-index: 400;
-}
+</head>
+<body data-vsapp-context="about">
+	<div class="site_wrapper">
+	<header class="main_header">
+					<div id="header_background_video">
+					</div>
+			</header>
+			<div id="content_outer_wrapper">
+				<div id="content_inner_wrapper">
+					<div id="content" data-content-context="about">	<section class="row" >
+		<div class="col_9">
+			<h1>Pioneering and fortifying.</h1>
+		</div>
+		<div class="col_3 footnotes">
+		</div>
+	</section>
+	<section class="row popular">
+		<div class="col_6">
+			<h3>
+				I develop cutting-edge technologies, conduct security assesments, pentests and risk-analysis; <br>Creating tomorrows defense.<br></h3>
+				<!--<button type="button" class="btn btn-danger" style="margin-top:20px;margin-right:1em;color:white;">Who am I</button><button type="button" class="btn btn-danger" style="margin-top:20px;color:white;">My Mission</button> -->
+<br><br>
 
-.fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
+				I started my IT carreer by winning <i>a NASA honorary achievement award</i> in 2018. Since then <a href="#timeline" target="_blank">I have not stopped</a> changing the world. Today, millions of people are safer because of technology I have worked on.			</p>
 
-.fa:hover {
-    opacity: 0.7;
-}
+			<div class="popular_games">
+				<p>
+					Spanning several fields and technologies, I have a broad understanding of systems and tech to apply in finding secure solutions and help solve vulnerabilities.					</p>
 
+				<div class="row">
+				<div class="popular_game col_6">
 
-.fa-linkedin {
-  background: #007bb5;
-  color: white;
-}
+							<img src="./resources/field_defence.jpg">
 
+						<h4>
+							Defense Sector					</h4>
+					</div>
+					<div class="popular_game col_6">
+							<img src="./resources/field_finance.jpg">
 
-.fa-github {
-  background: #ff6600;
-  color: white;
-}         
-          
+						<h4>
+							Finance Sector						</h4>
+					</div>					
+				</div>
+				<div class="row">
+					<div class="popular_game col_6">
+							<img src="./resources/field_robotics.jpg">
 
-          
-          
-          
-          
-          
-          
-          
-          
-          
-      </style>
-<header>
-  <!-- Navbar and page; -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container-fluid">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-mdb-toggle="collapse"
-        data-mdb-target="#navbarExample01"
-        aria-controls="navbarExample01"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <i class="fas fa-bars"></i>NAV
-      </button>
-      <div class="collapse navbar-collapse" id="navbarExample01">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Summary on Adri</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Timeline</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">CV + Portfolio</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
-  <!-- Navbar -->
+						<h4>
+							Robotics and Development						</h4>
+					</div>
+					<div class="popular_game col_6">
 
-  <!-- Background image -->
-    
-   <div class="bg"></div>
-  <div    class="jumbotron"
-    style="background-color: rgba(0, 0, 0, 0); height: 75vh">
-    <div class="jumbotron" style="background-color: rgba(0, 0, 0, 0.6); margin-top: 10vh;">
-      <div class="" style="color: white;">
-            <h1 class="display-4">I am Adrian Aparisi.</h1>
-            <p class="lead"> Fullstack Developer, Cyber Security specialist. <KBD>IT Solutions expert.</KBD></p>
-            <hr class="my-4" style="">
-            <div class="d-none d-lg-block"><p> Sometimes IT can feel like a <kbd>dark void.</kbd> But I can help you understand it.<br><br>
-              Whether youve hit a wall with front-end web development, backend MySQL or a fear of having an unsecure service, I can facilitate a solution for you.</p>
-            <a class="btn btn-dark btn-lg text-center" href="#" role="button">Learn more</a>
-            </div>
-</div>
-    </div>
-  </div>
-  <!-- Background image -->
-<div class="jumbotron" style="margin-bottom: 0px;"> 
-    <h1 style="text-align: center;"> Brief Summary </h1>
-    <br><br>
-<div class="card-deck">
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title" style="text-align: center;">WHO ARE YOU?</h5>
-      <p class="card-text">I am an experienced fullstack developer and a newly certified, and experienced, computer security specialist. Over years I've grown comfortable with many programming languages and different system architectures, combined with my love for puzzles and challenges I plunged into pentesting, computer security and exploit-hunting. </p>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-    <h5 class="card-title" style="text-align: center;">WHAT CAN YOU DO FOR ME?</h5>
-      <p class="card-text">With experiences from fields such as robotics and engineering, to a deep understanding of scripting, front- and back-end development; I can offer solutions within</p>
-<ul class="list-group list-group-flush">
-  <li class="list-group-item">Data Security</li>
-  <li class="list-group-item">Fullstack Development</li>
-  <li class="list-group-item">Technician & Problem Solving</li>
-</ul>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-body">
-    <h5 class="card-title" style="text-align: center;">WHERE CAN I REACH YOU?</h5>
-      <p class="card-text">If I sound like the tool you need for a problem you are facing, like a good addition to your team, or if you just want to talk to me regarding anything IT related, you can find me here:</p>
+							<img src="./resources/field_grc.jpg">
 
+						<h4>
+							GRC						</h4>
+					</div>
+				</div>
 
-<a href="https://www.linkedin.com/in/adriankodituwakku/" class="fa fa-linkedin"></a>
-<a href="https://github.com/eedori" class="fa fa-github"></a>
-      
-    </div>
-  </div>
-</div>
-</div>
-<div class="jumbotron">
-      <h1 style="text-align: center;">My Timeline.</h1>
-<div class="container mt-5 mb-5">
+			</div>
+		</div>
+		<div class="col_6 games_popular_overbleed_wrapper sm_hidden">
+			<div class="games_popular_overbleed_video video overbleed">
+				<video playsinline="" autoplay="" muted="" loop="">
+					<source src="./resources/Untitled.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+	</section>
+<section class="image dota_tournament">
+	<img src="./resources/speech.jpg">
 	<div class="row">
-		<div class="col-md-6 offset-md-3">
-			<ul class="timeline">
-				<li>
-					<a href="#">Robotics Degree</a>
-					<a href="#" class="float-right">July 2015</a>
-                    <footer class="blockquote-footer">Certificate, from <cite title="Source Title">Digital Media Academy</cite></footer>
-					<p>Graduated best in class in Robotics and Engineering</p>
-				</li>
-				<li>
-					<a href="#">Leadership Certificate</a>
-					<a href="#" class="float-right">Winter 2016</a>
-                    <footer class="blockquote-footer">Certificate, from <cite title="Source Title">Charlotta Burger Bäckström,</cite></footer>
-					<p> Certified in handling a team, coordinating efforts and utilizing members of a group effectively.</p>
-				</li>
-                <li>
-					<a href="#">Best Presentation</a>
-					<a href="#" class="float-right">May 2018</a>
-                    <footer class="blockquote-footer">Certificate, from a collaboration by <cite title="Source Title">edUcate, TIS, IBM, Skyscanner, Supercharge, BemyBoss, DayOne Capital,</cite></footer>
-					<p> Winner of Best Presentation while studying abroad in Budapest for workshops (Provided by Collaboration of TIS and EdUcate). These workshops were held by; Skyscanner, Supercharge, BemyBoss, DayOne Capital, CEU Innovation Lab, IBM and the National Tradehouse</p>
-				</li>
-                <li>
-					<a href="#">College Degree</a>
-					<a href="#" class="float-right">June 2018</a>
-                    <footer class="blockquote-footer">Collage Degree, from <cite title="Source Title">Thoren Innovation School   </cite></footer>
-					<p> College degree in Technology, 3 years Specialization, Server Programming and a thesis project involving the programming of a fullstack solution for the School.</p>
-				</li>
-                
-				<li>
-					<a href="#">Cyber Security Specialist</a>
-					<a href="#" class="float-right">until January 2019</a>
-                    <footer class="blockquote-footer">At HCK Associates, in<cite title="Source Title"> Texas, Austin. </cite></footer>
-					<p>Job included tasks such as developing a secure backend in PHP, MySQL, aswell as windows servers and procuring the solutions safety from attacks.</p>
-				</li>
-                <li>
-					<a href="#">Cash Register Operator</a>
-					<a href="#" class="float-right">Until March 2019</a>
-                    <footer class="blockquote-footer">At Vapiano, in<cite title="Source Title"> Stockholm, Sweden </cite></footer>
-				</li>
-                 <li>
-					<a href="#">Information Technology Technician</a>
-					<a href="#" class="float-right">Until April 2020</a>
-                    <footer class="blockquote-footer">At Vapiano, in<cite title="Source Title"> Stockholm, Sweden </cite></footer>
-                     References are avaiable upon request, contact me for further details.
-				</li>
-                <li>
-					<a href="#">OSCP Certification</a>
-					<a href="#" class="float-right">Issued March 2021</a>
-				</li>
-                <li>
-					<a href="#">Freelance</a>
-					<a href="#" class="float-right">Until Current Day</a>
-                    <footer class="blockquote-footer">In<cite title="Source Title"> Stockholm, Sweden </cite></footer>
-                    Front-end, Back-end and Computer Security Freelancing.
-				</li>
-                
-			</ul>
+		<div class="col_offset_9 col_3">
+			<div class="caption_wrapper">
+				<div class="image_caption caption">
+					<p>
+						Sharing how hackers think with developers, and the importance of Shift-Left security.					</p>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
+</section>
+
+<section>
+	<div class="row">
+		<div class="col_9" id="timeline">
+			<h3>
+				I've been doing security since middle school.			</h3>
+			<p>
+				Ever since I learned how to circumvent school IT-security policies to install DOOM on the windows machines, I was hooked. Now I do it as a living to help secure real people.		</p>
+				<p>
+					Specialising in penetration tests, vulnerability scans and security assessments: I love finding ways in so the wrong people do not.		</p>
+			</div>
+		
+	</div>
+
+	<div class="row">
+		<div class="col_12">
+			<img src="./resources/bulletpoints.png
+			">
+		</div>
+		<div class="col_offset_9 col_3">
+			<div class="caption_wrapper">
+				<div class="image_caption caption">
+					Some of my work in focus				</div>
+			</div>
+		</div>
+		<p>
+			Based in Stockholm, Sweden; reach out to me and let's secure the future together. 	</p>
+					<button type="button" class="btn btn-danger" style="margin-top:20px;margin-right:1em;color:white;">Full CV English</button><button type="button" class="btn btn-danger" style="margin-top:20px;color:white;">Full CV Swedish</button>
+
+		</div>
+</section>
+<section class="row">
+	<div class="col_6">
+		<h3>
+			I am just getting started.		</h3>
+		<p>
+		Based in Stockholm, Sweden; <a href = "mailto:adrian.aparisi@cag.se">reach out</a> to me and let's secure the future together. 	</p>
+	</div>
+
+</section></div>
+d
 
 
-<div class="row" style="align-content: center; text-align: center;">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Min CV på Svenska</h5>
-        <p class="card-text">Swedish option to download my reseme</p>
-        <a href="/CV2021.pdf" download class="btn btn-primary">Klicka här för att ladda ner!</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">MY CV in English</h5>
-        <p class="card-text">English Option for my CV</p>
-        <a href="/CV2021eng.pdf" download class="btn btn-primary">Click here to Download!</a>
-      </div>
-    </div>
-  </div>
-</div>
-      </div>
-      
-    <!-- Optional              JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
-</html>
+					</div>
+					<footer class="main_footer">
+						<div class="main_footer_inner_wrapper">
+							<div class="row">
+								<div class="col_2">
+									<h5 class="business_name"><a href="#">Adrian Aparisi</a></h5>
+								</div>
+								<div class="col_6 col_offset_1 footer_nav_wrapper">
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</div>
+		
